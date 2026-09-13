@@ -1,0 +1,65 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fff8f9;--paper:rgba(255,255,255,.82);--text:#3f3034;--muted:#846f75;--accent:#b86676;--dark:#914f5e;--line:rgba(184,102,118,.25)}
+html{scroll-behavior:smooth}
+body{font-family:"Poppins",sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 20%,rgba(220,164,176,.18),transparent 28%),radial-gradient(circle at 85% 75%,rgba(242,205,214,.22),transparent 30%);z-index:-1}
+.screen,.final{min-height:100svh;padding:65px 24px;display:flex;align-items:center;justify-content:center;position:relative}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:.98}
+h1{font-size:clamp(3.2rem,11vw,6.5rem)}
+h2{font-size:clamp(2.5rem,7vw,4.8rem)}
+em{color:var(--dark);font-style:italic}
+.eyebrow{color:var(--dark);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:18px}
+.number{color:var(--accent);font-family:"Cormorant Garamond",serif;font-size:2.2rem;font-style:italic;display:inline-block}
+.btn{border:0;border-radius:999px;background:var(--dark);color:white;padding:15px 25px;font:500 .88rem "Poppins",sans-serif;cursor:pointer;box-shadow:0 12px 30px rgba(145,79,94,.22);transition:.25s;position:relative}
+.btn:hover{transform:translateY(-3px);box-shadow:0 17px 35px rgba(145,79,94,.28)}
+.secondary{background:rgba(255,255,255,.9);color:var(--dark);border:1px solid rgba(255,255,255,.7);box-shadow:none}
+.hero{overflow:hidden;gap:clamp(25px,7vw,100px);background:linear-gradient(110deg,#fff8f9 35%,rgba(255,235,239,.72))}
+.hero-copy{max-width:650px;z-index:2}
+.hero-copy .intro{max-width:470px;margin:25px 0 30px;color:var(--muted);line-height:1.8}
+.hero-photo{width:min(38vw,430px);height:min(68vh,590px);border-radius:230px 230px 25px 25px;overflow:hidden;box-shadow:0 30px 80px rgba(93,48,58,.18);transform:rotate(2deg);border:8px solid rgba(255,255,255,.7)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.scroll-hint{position:absolute;bottom:22px;color:var(--muted);font-size:.7rem;letter-spacing:.08em}
+.story-split{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;background:#f9dfe4}
+.story-text{padding:10vw;display:flex;flex-direction:column;justify-content:center}
+.story-text h2{margin:15px 0 28px}
+.story-text p{max-width:550px;color:var(--muted);line-height:1.9;margin-bottom:15px}
+.little-note{margin-top:20px;color:var(--dark);font-size:.78rem;font-style:italic}
+.concert-art{min-height:100%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(150deg,#321f2a,#754454,#281d25)}
+.concert-art:before,.concert-art:after{content:"";position:absolute;width:45%;height:150%;background:rgba(255,224,230,.18);filter:blur(25px);transform:rotate(25deg)}
+.concert-art:before{left:10%}.concert-art:after{right:5%;transform:rotate(-25deg)}
+.concert-glow{position:absolute;width:230px;height:230px;border-radius:50%;background:rgba(255,195,207,.35);filter:blur(50px)}
+.concert-lights{font-size:2rem;color:#fff;position:relative;z-index:2}
+.concert-art p{position:absolute;bottom:12%;left:12%;z-index:2;color:#fff;font-family:"Cormorant Garamond",serif;font-size:2.2rem;font-style:italic;line-height:1.05}
+.after{background:linear-gradient(#fff9fa,#fdf0f2)}
+.wide-card{width:min(1100px,100%);padding:55px 6vw;background:var(--paper);border:1px solid var(--line);border-radius:35px;box-shadow:0 25px 70px rgba(95,54,63,.07)}
+.section-head{display:flex;gap:25px;align-items:flex-start}
+.section-head .mini{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:55px 0 45px}
+.memory{text-align:center;padding:22px 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.icon{display:block;color:var(--accent);font-size:1.7rem;margin-bottom:12px}
+.memory strong{display:block;font-family:"Cormorant Garamond",serif;font-size:1.35rem}.memory small{display:block;color:var(--muted);font-size:.67rem;line-height:1.5;margin-top:5px}
+.after-text{max-width:760px;margin:auto;text-align:center;color:var(--muted);line-height:1.9}
+.after-text p{margin-bottom:12px}.after-text strong{color:var(--dark)}
+.photo-section{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6vw;padding:80px 10vw;background:#f8dce2}
+.photo-copy{max-width:560px}.photo-copy h2{margin:15px 0 25px}.photo-copy p{color:var(--muted);line-height:1.9;margin-bottom:15px}.photo-copy strong{color:var(--dark);line-height:1.6;display:block}
+.photo-frame{width:min(100%,460px);justify-self:center;padding:15px 15px 45px;background:#fff;box-shadow:0 25px 60px rgba(70,40,47,.18);transform:rotate(-3deg);position:relative}
+.photo-frame img{display:block;width:100%;height:540px;object-fit:cover}
+.tape{position:absolute;top:-15px;left:35%;width:130px;height:35px;background:rgba(211,158,169,.55);transform:rotate(3deg);z-index:2}
+.photo-caption{position:absolute;bottom:13px;left:0;width:100%;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--muted);font-size:1.1rem}
+.letter{background:#fffafa}
+.letter-paper{width:min(1000px,100%);padding:60px 8vw;background:rgba(255,255,255,.75);border:1px solid var(--line);box-shadow:0 25px 80px rgba(85,48,57,.07);position:relative}
+.small-title{font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--dark);margin:12px 0}
+.letter-paper h2{max-width:750px;margin-bottom:35px}
+.letter-columns{display:grid;grid-template-columns:1fr 1fr;gap:7vw}
+.letter-columns p{color:var(--muted);line-height:1.95;margin-bottom:20px}
+.signature{font-family:"Cormorant Garamond",serif;font-size:1.5rem!important;font-style:italic;color:var(--dark)!important;margin-top:35px}
+.question{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#9d5868;color:white}
+.question-bg{position:absolute;inset:-20%;background:radial-gradient(circle at 25% 20%,rgba(255,220,228,.45),transparent 22%),radial-gradient(circle at 75% 80%,rgba(255,205,218,.35),transparent 25%);filter:blur(3px)}
+.question-content{position:relative;z-index:2;max-width:800px}.question-content .number{color:#f7d6dc}.question-content .eyebrow{color:#fff}.question-lead{font-size:.95rem;margin:25px 0;color:#f9e9ec}.question h2{font-size:clamp(3.5rem,10vw,7rem);color:#fff}.question h2 em{color:#fff;font-style:italic}.tiny-note{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.1rem;margin:25px auto 30px;color:#f6dfe4;max-width:500px}.answers{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.yes{background:#fff;color:var(--dark);box-shadow:0 15px 40px rgba(45,20,27,.2)}
+.final{background:linear-gradient(135deg,#fff5f7,#f9dfe5);text-align:center;overflow:hidden}.final-content{max-width:850px}.final .number{position:absolute;top:8%;left:8%}.big-heart{color:var(--dark);font-size:4.5rem;animation:heartbeat 1.2s infinite;margin:15px 0}.final-content>p:not(.eyebrow):not(.signature){max-width:600px;margin:28px auto;color:var(--muted);line-height:1.9}.final-content>strong{color:var(--dark);font-family:"Cormorant Garamond",serif;font-size:1.7rem}.final-photo{width:min(100%,500px);margin:35px auto 0;padding:8px;background:white;box-shadow:0 20px 50px rgba(80,45,53,.14);transform:rotate(2deg)}.final-photo img{display:block;width:100%;height:270px;object-fit:cover}.hidden{display:none}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}.heart{position:absolute;bottom:-30px;color:var(--accent);animation:floatUp linear forwards;opacity:.75}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}@keyframes heartbeat{50%{transform:scale(1.12)}}
+@media(max-width:800px){
+  .screen{padding:55px 20px}.hero{flex-direction:column;text-align:center;justify-content:center}.hero-photo{width:220px;height:300px;order:-1}.hero-copy .intro{margin:22px auto 28px}.story-split,.photo-section{grid-template-columns:1fr}.story-text,.photo-section{padding:70px 28px}.concert-art{min-height:55vh}.memory-grid{grid-template-columns:1fr 1fr;margin:40px 0}.wide-card{padding:38px 25px}.photo-frame{width:min(100%,360px)}.photo-frame img{height:440px}.letter-paper{padding:45px 28px}.letter-columns{grid-template-columns:1fr;gap:0}.question h2{font-size:clamp(3rem,14vw,5rem)}.final .number{top:4%;left:7%}
+}
+@media(max-width:430px){.memory-grid{grid-template-columns:1fr}.hero-photo{width:190px;height:260px}.concert-art p{font-size:1.8rem}.photo-frame img{height:400px}}
